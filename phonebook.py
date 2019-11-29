@@ -1,5 +1,6 @@
 
 class Phonebook:
+    size = 0
 
     def readInput(self):
-        input()
+        self.size = int(input())
