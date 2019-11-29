@@ -1,9 +1,10 @@
 import unittest
-import phonebook
+
+from phonebook import Phonebook
 
 class TestPhonebook(unittest.TestCase):
     def test_phonebook_class(self):
-        self.assertIsInstance(phonebook.Phonebook(), phonebook.Phonebook)
+        self.assertIsInstance(Phonebook(), Phonebook)
 
 
 if __name__ == '__main__':
