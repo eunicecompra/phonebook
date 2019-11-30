@@ -13,7 +13,7 @@ class Phonebook:
             try:
                 result = self.search_phonebook(input())
                 print(result)
-            except EOFError:
+            except (EOFError, StopIteration):
                 break
 
     def search_phonebook(self, name):
