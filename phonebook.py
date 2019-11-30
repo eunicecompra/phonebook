@@ -3,7 +3,7 @@ class Phonebook:
     size = 0
     phonebook = dict()
 
-    def readInput(self):
+    def read_input(self):
         self.size = int(input())
         for index in range (0, self.size):
             raw_detail = input()
