@@ -7,11 +7,12 @@ class TestPhonebook(unittest.TestCase):
     def test_phonebook_class(self):
         self.assertIsInstance(Phonebook(), Phonebook)
 
-    @patch("builtins.input", side_effect=["3"])
-    def test_input_size(self, input):
+    @patch("builtins.input", side_effect=["3", "sam 99912222", "tom 11122222", "harry 12299933"])
+    def test_input_details(self, input):
         p = Phonebook()
         p.readInput()
         self.assertEqual(p.size, 3)
+        self.assertDictEqual(p.phonebook, dict(sam="99912222", tom="11122222", harry="12299933"))
 
 
 if __name__ == '__main__':
