@@ -4,7 +4,7 @@ class Phonebook:
 
     def read_input(self):
         self.size = int(input())
-        for index in range (0, self.size):
+        for index in range (self.size):
             raw_detail = input()
             detail = raw_detail.split(" ", 1)
             self.phonebook[detail[0]] = detail[1]
